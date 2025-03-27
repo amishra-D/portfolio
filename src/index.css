@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.text-stroke {
+  -webkit-text-stroke: 0.3px white;
+  text-stroke: 0.2px white; /* For better browser support */
+}
+@font-face {
+  font-family: "Brut Grotesque";
+  src: url("/fonts/Brut_Grotesque_WEB-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brut Grotesque";
+  src: url("/fonts/Brut_Grotesque_WEB-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+
