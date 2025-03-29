@@ -97,10 +97,10 @@ const ContactForm = ({ forms, changeHandler, submitted }) => {
                 className='flex md:gap-6 gap-4 mt-3 self-end mb-8'
                 variants={itemVariants}
             >
-                <a href="https://github.com" aria-label="GitHub">
+                <a href="https://github.com/amishra-D" aria-label="GitHub">
                     <Github className="w-6 h-6 text-white hover:text-[#E7FF93] transition-colors duration-300" />
                 </a>
-                <a href="https://linkedin.com" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/anshu-mishra-a5b645291/" aria-label="LinkedIn">
                     <Linkedin className="w-6 h-6 text-white hover:text-[#E7FF93] transition-colors duration-300" />
                 </a>
                 <a href="https://instagram.com" aria-label="Instagram">

@@ -26,7 +26,7 @@ const Marquee = () => {
         transition={{
           ease: "linear",
           repeatType: "loop",
-          duration: 30,
+          duration: 60,
           repeat: Infinity,
         }}
       >

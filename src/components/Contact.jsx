@@ -61,7 +61,8 @@ const Contact = () => {
     };
 
     return (
-        <div className="bg-zinc-900 data-scroll data-scroll-speed='-0.3' data-scroll-section w-full min-h-screen flex flex-col md:flex-row relative z-40 overflow-hidden py-8 md:py-0 rounded-t-3xl">
+        <div className="bg-zinc-900  w-full min-h-screen flex flex-col md:flex-row relative z-40 overflow-hidden py-8 md:py-0 rounded-t-3xl"data-scroll data-scroll-speed='-0.2' data-scroll-section>
+          
             
             <div className="flex flex-col ml-4 justify-start items-start z-20 mt-8 px-4 md:px-0">
                 {head.map((item, index) => (
@@ -69,9 +70,9 @@ const Contact = () => {
                         key={index}
                         className={`head font-bold uppercase relative cursor-default
                             ${index === 3 ? 'text-white underline underline-offset-2 text-lg font-brut lowercase mt-[30%] flex items-center gap-2' : 'text-3xl sm:text-4xl md:text-5xl'} 
-                            ${index === 1 ? 'text-stroke text-transparent' : ''} 
-                            ${index === 2 ? 'font-barcode' : 'font-brut'} 
-                            ${index !== 3 ? 'text-white' : ''}`}
+                            ${index === 1 ? 'text-stroke text-transparent' : 'text-white'} 
+                            ${index === 2 ? 'font-barcode font-normal' : 'font-brut'} 
+                          `}
                         custom={index}
                         initial="hidden"
                         whileInView="visible"

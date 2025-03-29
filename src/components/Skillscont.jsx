@@ -11,7 +11,7 @@ const Skillscont = () => {
   ];
 
   return (
-    <div className="bg-[#CDEA68] w-full min-h-screen data-scroll data-scroll-speed='-0.3' data-scroll-section z-40 flex flex-col relative pt-20 pb-32">
+    <div className="bg-[#CDEA68] w-full min-h-screen z-40 flex flex-col relative pt-20 pb-32">
       <Skills />
       <div className="w-full flex flex-col gap-12 md:gap-16 px-4 md:px-8 mt-12 md:mt-20">
         {skills.map((item, index) => (
