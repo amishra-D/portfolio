@@ -91,7 +91,7 @@ Error generating stack: `+n.message+`
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const f7=[["path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z",key:"c2jq9f"}],["rect",{width:"4",height:"12",x:"2",y:"9",key:"mk3on5"}],["circle",{cx:"4",cy:"4",r:"2",key:"bt5ra8"}]],h7=Ls("linkedin",f7),f2=({text:i,type:a})=>V.jsxs("button",{type:a,className:`z-40 mt-6 md:mt-10 relative isolate text-white \r
+ */const f7=[["path",{d:"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z",key:"c2jq9f"}],["rect",{width:"4",height:"12",x:"2",y:"9",key:"mk3on5"}],["circle",{cx:"4",cy:"4",r:"2",key:"bt5ra8"}]],h7=Ls("linkedin",f7),f2=({text:i,type:a,variants:l})=>V.jsxs(at.button,{variants:i==="DOWNLOAD CV"?l:void 0,animate:"visible",initial:"hidden",type:a,className:`z-40 mt-6 md:mt-10 relative isolate text-white \r
             text-sm sm:text-base font-medium leading-normal flex justify-center \r
             items-center px-6 py-1.5 sm:px-8 sm:py-2 md:py-3 md:px-12 \r
             rounded-full bg-transparent transition-all duration-200 ease-out \r
