@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import React from "react";
 
 const AnimatedButton = ({ text, type }) => {
     return (
