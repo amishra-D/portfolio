@@ -2,7 +2,6 @@ import React, { forwardRef, useState } from "react";
 import { motion } from "framer-motion";
 import AnimatedButton from "./AnimatedButton";
 
-const resume='http://localhost:3000/Resume(3).pdf'
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -40,21 +39,7 @@ const gradientVariants = {
 
 
 const Home = forwardRef((props, ref) => {
-  const downloadpdf = () => {
-    try {
-      // Use relative path from public folder
-      const pdfUrl = '/Resume.pdf';
-      const link = document.createElement('a');
-      link.href = pdfUrl;
-      link.download = 'Anshu_Mishra_Resume.pdf'; // Better filename
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } catch (error) {
-      console.error('Download failed:', error);
-      // Optional: Add user feedback here
-    }
-  };
+ 
   const [isMoved, setIsMoved] = useState(false);
 
   return (
@@ -172,7 +157,7 @@ const Home = forwardRef((props, ref) => {
             ))}
           </motion.div>
         </motion.div>
-        <AnimatedButton downloadpdf={downloadpdf} resume={resume} text="DOWNLOAD CV" 
+        <AnimatedButton  text="DOWNLOAD CV" 
         variants={itemVariants}/> 
       </div>
 
