@@ -6,7 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'max-xs': {'max': '480px'},
+      },
       fontFamily: {
+        barcode: ['"Libre Barcode 39 Text"', 'cursive'],
         brut: ["Brut Grotesque", "sans-serif"],
       },
       textStrokeWidth: {

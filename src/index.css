@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 .text-stroke {
-  -webkit-text-stroke: 0.3px white;
-  text-stroke: 0.2px white; /* For better browser support */
+  -webkit-text-stroke: 0.5px white;
 }
 @font-face {
   font-family: "Brut Grotesque";

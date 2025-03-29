@@ -1,32 +1,62 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Navbar from "./Navbar";
+import AnimatedButton from "./AnimatedButton";
 
-const Navbar = () => {
-  return (
-    <nav className="font-brut w-full h-16 sm:h-20 md:h-24 fixed top-0 left-0 flex items-center justify-end px-4 sm:px-6 md:px-8 lg:px-10 z-50">
-      <div className="flex flex-row gap-x-4 sm:gap-x-6 md:gap-x-8 lg:gap-x-10 text-white text-xs sm:text-sm">
-        <p className="cursor-pointer hover:opacity-80 transition">HOME</p>
-        <p className="cursor-pointer hover:opacity-80 transition">CONTACT</p>
-        <p className="cursor-pointer hover:opacity-80 transition">PROJECTS</p>
-        <p className="cursor-pointer hover:opacity-80 transition">ABOUT ME</p>
-      </div>
-    </nav>
-  );
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3
+    }
+  }
 };
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      ease: "easeOut",
+      duration: 1
+    }
+  }
+};
+
+const gradientVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 0.9,
+    transition: {
+      duration: 1.5,
+      ease: "easeInOut"
+    }
+  }
+};
+
+
 
 const Home = () => {
   const [isMoved, setIsMoved] = useState(false);
 
   return (
-    <div className="home flex flex-col h-screen bg-black">
-      <Navbar />
-      
+    <motion.div 
+      initial="hidden"
+      animate="visible"
+      className="home flex flex-col h-screen bg-black overflow-hidden z-20"
+    >
       <div className="relative w-full h-full flex flex-col items-start justify-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 overflow-hidden">
-        {/* Gradient Backgrounds */}
-        <div className="absolute inset-0 w-full h-full flex justify-between items-start z-10 overflow-hidden">
-          {/* Bottom Gradient */}
+        
+        <motion.div 
+          className="absolute inset-0 w-full h-full flex justify-between items-start z-10 overflow-hidden"
+          variants={containerVariants}
+        >
           <motion.div
-            className="w-[50%] xs:w-[45%] sm:w-[40%] h-[200px] xs:h-[250px] sm:h-[300px] md:h-[350px] bg-gradient-to-br from-[#DFFFB0] to-[#E9FEC9] rounded-full blur-[80px] sm:blur-[100px] opacity-90 mix-blend-normal self-end"
+            className="w-[50%] xs:w-[45%] sm:w-[40%] h-[200px] xs:h-[250px] sm:h-[300px] md:h-[350px] bg-gradient-to-br from-[#DFFFB0] to-[#E9FEC9] rounded-full blur-[80px] sm:blur-[100px] mix-blend-normal self-end"
+            variants={gradientVariants}
             initial={{ x: "-10%", y: "0%" }}
             animate={{
               x: ["-30%", "-40%", "-30%"],
@@ -40,9 +70,9 @@ const Home = () => {
             }}
           />
           
-          {/* Top Gradient */}
           <motion.div
-            className="w-[60%] xs:w-[55%] sm:w-[50%] h-[250px] xs:h-[300px] sm:h-[350px] md:h-[400px] bg-gradient-to-tl from-[#A2FFD0] to-teal-500 rounded-full blur-[80px] sm:blur-[100px] opacity-90 mix-blend-normal"
+            className="w-[60%] xs:w-[55%] sm:w-[50%] h-[250px] xs:h-[300px] sm:h-[350px] md:h-[400px] bg-gradient-to-tl from-[#A2FFD0] to-teal-500 rounded-full blur-[80px] sm:blur-[100px] mix-blend-normal"
+            variants={gradientVariants}
             initial={{ x: "20%", y: "-90%" }}
             animate={{
               x: ["20%", "30%", "20%"],
@@ -56,22 +86,29 @@ const Home = () => {
               delay: 2,
             }}
           />
-        </div>
+        </motion.div>
 
-        {/* Content Section */}
-        <div className="z-30 text-left w-full">
-          <div className="font-bold text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight">
+        <motion.div 
+          className="z-30 text-left w-full"
+          variants={containerVariants}
+        >
+          <motion.div 
+            className="font-bold text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight"
+            variants={itemVariants}
+          >
             Hi, I'm
-            <span
+            <motion.span
               className="bg-[#FCFCDC] rounded-3xl inline-flex items-center justify-between px-2 py-0.5 sm:px-3 sm:py-1 md:px-4 md:py-1.5 mx-1 sm:mx-2 h-6 sm:h-8 md:h-10 w-[60px] sm:w-[80px] md:w-[100px] relative cursor-pointer overflow-hidden"
               onClick={() => setIsMoved(!isMoved)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <motion.div
                 className="flex items-center w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8"
                 animate={{
-                  x: isMoved ? [0, 15, 25] : 0,
+                  x: isMoved ? [0, 25] : 0,
                   rotate: isMoved ? 360 : 0,
-                  scale: isMoved ? [1, 1.05, 1.1] : 1,
+                  scale: isMoved ? [1, 1.1] : 1,
                 }}
                 transition={{
                   duration: 1.5,
@@ -92,21 +129,38 @@ const Home = () => {
                   />
                 </svg>
               </motion.div>
-            </span>
-            <span className="text-black text-stroke">Anshu Mishra</span>
-          </div>
-
-          <motion.div className="mt-2 sm:mt-3 md:mt-4">
-            <p className="text-base sm:text-lg md:text-3xl lg:text-2xl xl:text-3xl text-white font-bold leading-snug">
-              Full Stack Developer passionate about building scalable
-            </p>
-            <p className="text-base sm:text-lg md:text-3xl lg:text-2xl xl:text-3xl text-white font-bold leading-snug">
-              web & mobile applications.
-            </p>
+            </motion.span>
+            <motion.span 
+              className="text-black text-stroke"
+              variants={itemVariants}
+            >
+              Anshu Mishra
+            </motion.span>
           </motion.div>
-        </div>
+
+          <motion.div 
+            className="mt-2 sm:mt-3 md:mt-4"
+            variants={containerVariants}
+          >
+            {[
+              "Full Stack Developer passionate about building scalable",
+              "web & mobile applications."
+            ].map((text, index) => (
+              <motion.p 
+                key={index}
+                variants={itemVariants}
+                className="text-base sm:text-xl md:text-3xl lg:text-3xl xl:text-5xl text-white font-bold leading-snug lg:md:whitespace-nowrap xl:md:whitespace-nowrap md:whitespace-nowrap"
+              >
+                {text}
+              </motion.p>
+            ))}
+          </motion.div>
+        </motion.div>
+        <AnimatedButton text="DOWNLOAD CV" 
+        variants={itemVariants}/> 
       </div>
-    </div>
+
+    </motion.div>
   );
 };
 
