@@ -2,9 +2,12 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import React from "react";
 
-const AnimatedButton = ({ text, type }) => {
+const AnimatedButton = ({ text, type,variants }) => {
     return (
-        <button 
+        <motion.button 
+        variants={text==="DOWNLOAD CV"?variants:undefined}
+        animate="visible"
+        initial="hidden"
             type={type} 
             className="z-40 mt-6 md:mt-10 relative isolate text-white 
             text-sm sm:text-base font-medium leading-normal flex justify-center 
@@ -36,7 +39,7 @@ const AnimatedButton = ({ text, type }) => {
                     />
                 }
             </span>
-        </button>
+        </motion.button>
     );
 };
 

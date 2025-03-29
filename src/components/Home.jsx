@@ -158,7 +158,8 @@ const Home = forwardRef((props, ref) => {
           </motion.div>
         </motion.div>
         <AnimatedButton  text="DOWNLOAD CV" 
-        variants={itemVariants}/> 
+        variants={itemVariants}
+        /> 
       </div>
 
     </motion.div>
