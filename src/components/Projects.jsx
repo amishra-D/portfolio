@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import { motion } from "framer-motion";
 import roadRatingImg from "../assets/Screenshot 2025-03-28 021014.png";
 import notesCalcImg from "../assets/Screenshot 2025-03-28 021747.png";
 import readRushImg from "../assets/Screenshot 2025-03-28 021206.png";
 import acCloneImg from "../assets/Screenshot 2025-03-28 021919.png";
 
-const Projects = () => {
+const Projects = forwardRef((props,ref) => {
   const projects = [
     { 
       name: "ROAD RATING", 
@@ -35,9 +35,8 @@ const Projects = () => {
   const handleImageClick = (url) => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
-
   return (
-    <div className="bg-black w-full min-h-screen flex flex-col lg:flex-row items-start justify-between lg:justify-around z-40 p-4 md:p-8 gap-6 md:gap-8">
+    <div className="bg-black w-full min-h-screen flex flex-col lg:flex-row items-start justify-between lg:justify-around z-40 p-4 md:p-8 gap-6 md:gap-8" ref={ref}>
       <motion.div 
         className="flex flex-col w-full lg:w-[40%] xl:w-[35%] space-y-6"
         initial={{ opacity: 0, x: -50 }}
@@ -158,6 +157,6 @@ const Projects = () => {
       </motion.div>
     </div>
   );
-};
+});
 
 export default Projects;

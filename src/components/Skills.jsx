@@ -19,7 +19,7 @@ const icons = [
 
 const Marquee = () => {
   return (
-    <div className="w-full overflow-hidden rotate-[2deg] -top-11 absolute bg-gradient-to-r from-[#EBFFA4] to-[#8D9962] py-8 max-xs:py-4 z-80">
+    <div className="w-[105%] overflow-hidden rotate-[2deg] -top-11 absolute bg-gradient-to-r from-[#EBFFA4] to-[#8D9962] py-8 max-xs:py-4 z-80">
       <motion.div
         className="flex gap-20 md:gap-24 w-max flex-nowrap"
         animate={{ x: ["0%", "-50%"] }} 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import ContactForm from './ContactForm';
 import { ArrowUpRight } from "lucide-react";
@@ -36,7 +36,7 @@ const arrowVariants = {
   }
 };
 
-const Contact = () => {
+const Contact = forwardRef((props,ref) => {
     const head = ["together we can", "make something", "extraordinary", "anshumishraocog@gmail.com"];
     const [forms, setForms] = useState({ name: '', email: '', message: '' });
     const [isHovered, setIsHovered] = useState(false);
@@ -61,7 +61,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="bg-zinc-900  w-full min-h-screen flex flex-col md:flex-row relative z-40 overflow-hidden py-8 md:py-0 rounded-t-3xl"data-scroll data-scroll-speed='-0.2' data-scroll-section>
+        <div className="bg-zinc-900  w-full min-h-screen flex flex-col md:flex-row relative z-40 overflow-hidden py-8 md:py-0 rounded-t-3xl"ref={ref} data-scroll data-scroll-speed='-0.2' data-scroll-section>
           
             
             <div className="flex flex-col ml-4 justify-start items-start z-20 mt-8 px-4 md:px-0">
@@ -106,6 +106,6 @@ const Contact = () => {
             />
         </div>
     );
-};
+});
 
 export default Contact;

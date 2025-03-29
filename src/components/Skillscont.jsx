@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import Skills from './Skills.jsx';
 import Skilloval from './Skilloval.jsx';
 
-const Skillscont = () => {
+const Skillscont = forwardRef((props,ref) => {
   const skills = [
     { header: 'Frontend', desc: 'Building Interactive And Responsive UI' },
     { header: 'Backend', desc: 'Building Fast And Scalable APIs' },
@@ -11,7 +11,8 @@ const Skillscont = () => {
   ];
 
   return (
-    <div className="bg-[#CDEA68] w-full min-h-screen z-40 flex flex-col relative pt-20 pb-32">
+    <div className="bg-[#CDEA68] w-full min-h-screen z-40 flex flex-col relative pt-20 pb-32"
+    ref={ref}>
       <Skills />
       <div className="w-full flex flex-col gap-12 md:gap-16 px-4 md:px-8 mt-12 md:mt-20">
         {skills.map((item, index) => (
@@ -26,6 +27,6 @@ const Skillscont = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Skillscont;

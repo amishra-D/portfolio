@@ -24,9 +24,16 @@ const itemVariants = {
   }
 };
 
-const Navbar = () => {
+const Navbar = ({scrollToSection,homeRef,projectsRef,aboutRef,skillsRef,contactsRef}) => {
+  const navItems = [
+    { name: "HOME", ref: homeRef },
+    { name: "ABOUT ME", ref: aboutRef },
+    { name: "SKILLS", ref: skillsRef },
+    { name: "PROJECTS", ref: projectsRef },
+    { name: "CONTACT", ref: contactsRef }
+  ];
   return (
-    <motion.nav 
+    <motion.nav
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -36,13 +43,14 @@ const Navbar = () => {
         className="flex flex-row gap-x-4 sm:gap-x-6 md:gap-x-20 lg:gap-x-28 text-white text-xs sm:text-sm"
         variants={containerVariants}
       >
-        {["HOME", "CONTACT", "PROJECTS", "ABOUT ME"].map((item) => (
+        {navItems.map((item) => (
           <motion.p 
-            key={item}
+            key={item.name}
             variants={itemVariants}
             className="cursor-pointer relative group whitespace-nowrap transition-opacity"
+            onClick={()=>scrollToSection(item.ref)}
           >
-            {item}
+            {item.name}
             <span className="absolute left-0 -bottom-2 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
           </motion.p>
         ))}

@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-const AnimatedButton = ({ text, type }) => {
+const AnimatedButton = ({ text, type,downloadpdf,resume }) => {
     return (
         <button 
-            type={type} 
+        onClick={text === "DOWNLOAD CV" ? () => downloadpdf(resume) : undefined}
+        type={type} 
             className="z-40 mt-6 md:mt-10 relative isolate text-white 
             text-sm sm:text-base font-medium leading-normal flex justify-center 
             items-center px-6 py-1.5 sm:px-8 sm:py-2 md:py-3 md:px-12 
