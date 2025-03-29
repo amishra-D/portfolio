@@ -40,7 +40,7 @@ const Navbar = ({scrollToSection,homeRef,projectsRef,aboutRef,skillsRef,contacts
       className=" w-full h-16 sm:h-20 md:h-24 fixed top-0 left-0 flex items-center justify-end px-4 sm:px-6 md:px-8 lg:px-10 z-50"
     >
       <motion.div 
-        className="flex flex-row gap-x-4 sm:gap-x-6 md:gap-x-20 lg:gap-x-28 text-white text-xs sm:text-sm"
+        className="flex font-brut flex-row gap-x-4 sm:gap-x-6 md:gap-x-20 lg:gap-x-28 text-white text-xs sm:text-sm"
         variants={containerVariants}
       >
         {navItems.map((item) => (

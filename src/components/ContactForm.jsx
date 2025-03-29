@@ -39,7 +39,7 @@ const ContactForm = ({ forms, changeHandler, submitted }) => {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
             variants={containerVariants}
-            className="bg-[#1A1A1A] w-[90%] md:w-[40%] h-auto p-8 mx-auto md:absolute md:top-10 md:right-28 z-30 flex flex-col gap-6 rounded-xl shadow-2xl opacity-80 mt-8 md:mt-16 mb-8 md:mb-0 backdrop-blur-sm "
+            className="bg-[#1A1A1A]  w-[90%] md:w-[40%] h-auto p-8 mx-auto md:absolute md:top-10 md:right-28 z-30 flex flex-col gap-6 rounded-xl shadow-2xl opacity-80 mt-8 md:mt-16 mb-8 md:mb-0 backdrop-blur-sm "
         >
             <motion.form 
                 onSubmit={submitted} 
@@ -55,7 +55,7 @@ const ContactForm = ({ forms, changeHandler, submitted }) => {
                         name="name" 
                         value={forms.name} 
                         placeholder="Your Name" 
-                        className="text-xl md:text-2xl bg-transparent w-full px-3 border-b-2 border-[#E7FF93] focus:border-[#E7FF93]/80 rounded-none outline-none text-white py-3 transition-all duration-300 focus:scale-[1.02]" 
+                        className="text-xl font-brut md:text-2xl bg-transparent w-full px-3 border-b-2 border-[#E7FF93] focus:border-[#E7FF93]/80 rounded-none outline-none text-white py-3 transition-all duration-300 focus:scale-[1.02]" 
                         required
                     />
                 </motion.div>
@@ -68,7 +68,7 @@ const ContactForm = ({ forms, changeHandler, submitted }) => {
                         name="email" 
                         value={forms.email} 
                         placeholder="Your @Email" 
-                        className="text-xl md:text-2xl bg-transparent w-full px-3 border-b-2 border-[#E7FF93] focus:border-[#E7FF93]/80 rounded-none outline-none text-white py-3 transition-all duration-300 focus:scale-[1.02]" 
+                        className="text-xl font-brut md:text-2xl bg-transparent w-full px-3 border-b-2 border-[#E7FF93] focus:border-[#E7FF93]/80 rounded-none outline-none text-white py-3 transition-all duration-300 focus:scale-[1.02]" 
                         required
                     />
                 </motion.div>
@@ -80,7 +80,7 @@ const ContactForm = ({ forms, changeHandler, submitted }) => {
                         name="message" 
                         value={forms.message} 
                         placeholder="Write a Message" 
-                        className="text-xl md:text-2xl bg-transparent w-full px-3 border-b-2 border-[#E7FF93] focus:border-[#E7FF93]/80 rounded-none outline-none text-white resize-none transition-all duration-300 focus:scale-[1.02]"
+                        className="text-xl font-brut md:text-2xl bg-transparent w-full px-3 border-b-2 border-[#E7FF93] focus:border-[#E7FF93]/80 rounded-none outline-none text-white resize-none transition-all duration-300 focus:scale-[1.02]"
                         required
                     />
                 </motion.div>

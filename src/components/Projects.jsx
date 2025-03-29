@@ -104,7 +104,7 @@ const Projects = forwardRef((props,ref) => {
                     color: activeIndex === index ? "#CDEA68" : "rgba(255,255,255,0.3)"
                   }}
                   transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                  className="text-2xl md:text-4xl font-bold truncate"
+                  className="text-2xl md:text-4xl font-bold truncate font-brut"
                 >
                   {project.name}
                 </motion.div>
@@ -113,7 +113,7 @@ const Projects = forwardRef((props,ref) => {
                   <motion.p
                     initial={{ y: 10, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    className="text-white/70 mt-2 font-bold text-base md:text-lg"
+                    className="text-white/70 mt-2 font-bold text-base md:text-lg font-brut"
                   >
                     {project.description}
                   </motion.p>

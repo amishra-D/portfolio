@@ -14,7 +14,7 @@ const Skillscont = forwardRef((props,ref) => {
     <div className="bg-[#CDEA68] w-full min-h-screen z-40 flex flex-col relative pt-20 pb-32"
     ref={ref}>
       <Skills />
-      <div className="w-full flex flex-col gap-12 md:gap-16 px-4 md:px-8 mt-12 md:mt-20">
+      <div className="w-full flex flex-col gap-12 md:gap-16 px-4 md:px-8 mt-12 md:mt-20 font-brut">
         {skills.map((item, index) => (
           <Skilloval 
             key={index}

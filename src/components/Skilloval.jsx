@@ -48,7 +48,7 @@ const Skilloval = ({ index, header, desc, position }) => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold opacity-40 mb-1 md:mb-2"
+            className="text-4xl md:text-6xl font-bold opacity-40 mb-1 md:mb-2 font-brut"
           >
             {String(index).padStart(2, "0")}
           </motion.div>
@@ -59,7 +59,7 @@ const Skilloval = ({ index, header, desc, position }) => {
             whileInView="visible"
             transition={{ delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-xl md:text-4xl font-bold mb-1 md:mb-2"
+            className="text-xl md:text-4xl font-bold mb-1 md:mb-2 font-brut"
           >
             {header}
           </motion.div>
@@ -70,7 +70,7 @@ const Skilloval = ({ index, header, desc, position }) => {
             whileInView="visible"
             transition={{ delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-xs md:text-lg font-medium max-w-[240px] md:max-w-xs"
+            className="text-xs md:text-lg font-medium max-w-[240px] md:max-w-xs font-brut"
           >
             {desc}
           </motion.div>
