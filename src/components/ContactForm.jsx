@@ -43,7 +43,7 @@ const ContactForm = ({ forms, changeHandler, submitted }) => {
         >
             <motion.form 
                 onSubmit={submitted} 
-                className="w-full flex flex-col gap-16 font-brut placeholder-[#988F8F]"
+                className="w-full flex flex-col gap-16 placeholder-[#988F8F]"
                 variants={containerVariants}
             >
                 <motion.div variants={itemVariants}

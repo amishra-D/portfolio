@@ -143,7 +143,7 @@ const About = forwardRef((props, ref) => {
                             viewport={{ margin: "0px 0px -100px 0px", amount: 0.3 }}
                             variants={paragraphVariants}
                         >
-                            <motion.p className="text-white font-brut text-xl sm:text-3xl md:text-4xl lg:text-[2.7rem] xl:text-5xl font-extrabold uppercase leading-tight md:leading-normal">
+                            <motion.p className="text-white text-xl sm:text-3xl md:text-4xl lg:text-[2.7rem] xl:text-5xl font-extrabold uppercase leading-tight md:leading-normal">
                                 {sentence.split(" ").map((word, i) => (
                                     <motion.span 
                                         onMouseEnter={textEnter} 

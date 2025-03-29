@@ -69,9 +69,9 @@ const Contact = forwardRef((props,ref) => {
                     <motion.div
                         key={index}
                         className={`head font-bold uppercase relative cursor-default
-                            ${index === 3 ? 'text-white underline underline-offset-2 text-lg font-brut lowercase mt-[30%] flex items-center gap-2' : 'text-3xl sm:text-4xl md:text-5xl'} 
+                            ${index === 3 ? 'text-white underline underline-offset-2 text-lg lowercase mt-[30%] flex items-center gap-2' : 'text-3xl sm:text-4xl md:text-5xl'} 
                             ${index === 1 ? 'text-stroke text-transparent' : 'text-white'} 
-                            ${index === 2 ? 'font-barcode font-normal' : 'font-brut'} 
+                            ${index === 2 ? 'font-barcode font-normal' : 'font-sans'} 
                           `}
                         custom={index}
                         initial="hidden"
