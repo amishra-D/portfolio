@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -10,7 +11,7 @@ export default {
         'max-xs': {'max': '480px'},
       },
       fontFamily: {
-        barcode: ['"Libre Barcode 39 Text"', 'cursive'],
+        barcode: ['"Libre Barcode 128 Text"', 'cursive'],
         brut: ["Brut Grotesque", "sans-serif"],
       },
       textStrokeWidth: {

@@ -24,6 +24,7 @@ const Skillscont = forwardRef((props,ref) => {
             index={index + 1}
           />
         ))}
+        
       </div>
     </div>
   );

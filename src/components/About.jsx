@@ -1,7 +1,6 @@
 import { useScroll, motion, useTransform, useMotionValue, useSpring } from "framer-motion";
-import { div } from "framer-motion/client";
 import React, { forwardRef, useEffect, useRef, useState } from "react";
-
+import Dimage from "../assets/WhatsApp Image 2025-03-30 at 15.54.06_a7bb70de.jpg";
 const About = forwardRef((props, ref) => {
 
     const x = useMotionValue(0);
@@ -83,7 +82,7 @@ const About = forwardRef((props, ref) => {
             height: 100,
             width: 100,
             borderRadius:0,
-            backgroundColor: "black",
+            backgroundColor: "red",
              rotate:45,
         }
     };
@@ -132,8 +131,10 @@ const About = forwardRef((props, ref) => {
             className="relative w-full overflow-x-hidden"
             style={{ cursor: 'none' }}
         >
-            <div className="About w-full min-h-[300vh] flex flex-col lg:flex-row justify-center lg:justify-between bg-black items-start px-4 sm:px-6 md:px-10" ref={ref}>
-                <div className="w-full lg:w-[60%] xl:w-[50%] sm:w-[50%] h-full flex flex-col">
+            
+            <div className="About w-full relative min-h-[300vh] flex flex-col lg:flex-row justify-center lg:justify-between bg-black items-start px-4 sm:px-6 md:px-10" ref={ref}>
+           
+<div className="w-full lg:w-[60%] xl:w-[50%] sm:w-[50%] h-full flex flex-col z-20">
                     {sentences.map((sentence, index) => (
                         <motion.div
                             key={index}
@@ -175,7 +176,8 @@ const About = forwardRef((props, ref) => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ margin: "0px 0px -100px 0px" }}
-                />
+                ><img src={Dimage} alt="my" className="object-scale-down"></img>
+                </motion.div>
             </div>
             <motion.div
                 ref={cursorRef}

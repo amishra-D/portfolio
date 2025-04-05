@@ -1,5 +1,5 @@
 import React, { forwardRef, useState } from "react";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import AnimatedButton from "./AnimatedButton";
 
 const containerVariants = {
@@ -50,7 +50,6 @@ const Home = forwardRef((props, ref) => {
       ref={ref}
     >
       <div className="relative w-full h-full flex flex-col items-start justify-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 overflow-hidden">
-        
         <motion.div 
           className="absolute inset-0 w-full h-full flex justify-between items-start z-10 overflow-hidden"
           variants={containerVariants}
@@ -60,9 +59,11 @@ const Home = forwardRef((props, ref) => {
             variants={gradientVariants}
             initial={{ x: "-10%", y: "0%" }}
             animate={{
-              x: ["-30%", "-40%", "-30%"],
-              y: ["0%", "-10%", "0%"],
-              scale: [1, 1.1, 1],
+              x: ["-40%", "-50%", "-30%", "-45%", "-40%"],
+              y: ["0%", "-15%", "10%", "-10%", "0%"],
+              scale: [1, 1.25, 1.1, 1.2, 1],
+              rotate: [0, 15, -10, 5, 0],
+
             }}
             transition={{
               duration: 15,
@@ -76,10 +77,10 @@ const Home = forwardRef((props, ref) => {
             variants={gradientVariants}
             initial={{ x: "20%", y: "-90%" }}
             animate={{
-              x: ["20%", "30%", "20%"],
-              y: ["-10%", "-30%", "-10%"],
-              scale: [1, 1.2, 1],
-            }}
+              x: ["20%", "35%", "25%", "15%", "20%"],
+              y: ["-10%", "-40%", "-20%", "-30%", "-10%"],
+              scale: [1, 1.25, 1.1, 1.2, 1],
+              rotate: [0, 15, -10, 5, 0],}}
             transition={{
               duration: 20,
               repeat: Infinity,
@@ -133,8 +134,7 @@ const Home = forwardRef((props, ref) => {
             </motion.span>
             <motion.span 
               className="text-black text-stroke"
-              variants={itemVariants}
-            >
+              variants={itemVariants}>
               Anshu Mishra
             </motion.span>
           </motion.div>
