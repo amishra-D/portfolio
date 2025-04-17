@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, useScroll } from "framer-motion";
 import { Menu, X } from "lucide-react";
-
+  
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -48,10 +48,8 @@ const Navbar = ({ scrollToSection, homeRef, projectsRef, aboutRef, skillsRef, co
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <motion.div 
           style={{ 
-            opacity: scrollYProgress,
-            scale: 1 + scrollYProgress * 0.5 
-          }} 
-          className="text-red-500 font-bold text-lg font-brut"
+            opacity: scrollYProgress          }} 
+          className="text-white font-bold text-lg font-brut"
         >
 Anshu Mishra        </motion.div>
 

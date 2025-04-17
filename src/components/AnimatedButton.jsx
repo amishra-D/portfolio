@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import React from "react";
 
-const AnimatedButton = ({ text, type,variants }) => {
+const AnimatedButton = ({ text, type,variants,handleDownload }) => {
     return (
-        <motion.button 
+        <motion.button onClick={handleDownload}
         variants={text==="DOWNLOAD CV"?variants:undefined}
         animate="visible"
         initial="hidden"

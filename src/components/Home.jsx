@@ -1,7 +1,22 @@
 import React, { forwardRef, useState } from "react";
 import { color, motion } from "framer-motion";
 import AnimatedButton from "./AnimatedButton";
-
+const handleDownload = async () => {
+  try {
+    const response = await fetch('/Resume.pdf');
+    const blob = await response.blob();
+    const downloadUrl = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = 'Your-Name-CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.URL.revokeObjectURL(downloadUrl);
+  } catch (error) {
+    console.error('Error downloading file:', error);
+  }
+};
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -157,7 +172,7 @@ const Home = forwardRef((props, ref) => {
             ))}
           </motion.div>
         </motion.div>
-        <AnimatedButton  text="DOWNLOAD CV" 
+        <AnimatedButton handleDownload={handleDownload} text="DOWNLOAD CV" 
         variants={itemVariants}
         /> 
       </div>
