@@ -28,7 +28,6 @@ const Skilloval = ({ index, header, desc, position }) => {
     >
       <div className={`relative w-full max-w-2xl ${position === "left" ? "md:ml-8" : "md:mr-8"}`}>
         
-        {/* Responsive SVG */}
         <svg 
           className="w-full h-auto max-w-[600px] md:max-w-[500px]" 
           viewBox="0 0 848 736" 

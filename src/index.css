@@ -17,5 +17,13 @@
   font-weight: 500;
   font-style: normal;
 }
+/* Hide scrollbar */
+.Scroller::-webkit-scrollbar {
+  display: none;
+}
+.Scroller {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 

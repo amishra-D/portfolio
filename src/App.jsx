@@ -1,63 +1,53 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import Home from "./components/Home.jsx";
 import Navbar from "./components/Navbar.jsx";
 import About from "./components/About.jsx";
-import Projects from "./components/Projects.jsx";
 import Skillscont from "./components/Skillscont.jsx";
 import Contacts from "./components/Contact.jsx";
 import "@fontsource/libre-barcode-39-text";
-import LocomotiveScroll from "locomotive-scroll";
+import Moreabout from "./components/Moreabout.jsx";
+import EachSkill from "./components/EachSkill.jsx";
+import { ChevronUp } from 'lucide-react';
+import Project from "./components/Project.jsx";
 
 const App = () => {
-  const scrollRef = useRef(null);
-  const locomotiveScroll = useRef(null);
-  
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const contactsRef = useRef(null);
 
-  useEffect(() => {
-    if (scrollRef.current) {
-      locomotiveScroll.current = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-      });
-    }
-
-    return () => {
-      if (locomotiveScroll.current) {
-        locomotiveScroll.current.destroy();
-      }
-    };
-  }, []);
-
   const scrollToSection = (sectionRef) => {
-    if (locomotiveScroll.current && sectionRef.current) {
-      locomotiveScroll.current.scrollTo(sectionRef.current, {
-        offset: -100,
-        duration: 2,
-        disableLerp: true,
-      });
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
   return (
-    <div ref={scrollRef} className="bg-black min-h-screen flex flex-col overflow-x-hidden relative">
-      <Navbar 
-        scrollToSection={scrollToSection} 
-        homeRef={homeRef} 
-        aboutRef={aboutRef} 
-        projectsRef={projectsRef} 
-        contactsRef={contactsRef} 
-        skillsRef={skillsRef} 
+    <div className="bg-black min-h-screen flex flex-col overflow-x-hidden relative scroll-smooth">
+      <div
+        className="bg-green-700 rounded-full w-16 h-16 flex justify-center items-center bottom-4 right-4 z-50 fixed scale-95 active:scale-100 active:bg-green-700"
+        onClick={() => scrollToSection(homeRef)}
+      >
+        <ChevronUp size={28} color="white" />
+      </div>
+
+      <Navbar
+        scrollToSection={scrollToSection}
+        homeRef={homeRef}
+        aboutRef={aboutRef}
+        projectsRef={projectsRef}
+        contactsRef={contactsRef}
+        skillsRef={skillsRef}
       />
-      
+
       <Home ref={homeRef} />
       <About ref={aboutRef} />
       <Skillscont ref={skillsRef} />
-      <Projects ref={projectsRef} />
+      <Moreabout/>
+      <EachSkill />
+      <Project ref={projectsRef}/>
+      {/* <Projects ref={projectsRef} /> */}
       <Contacts ref={contactsRef} />
     </div>
   );
