@@ -29,7 +29,7 @@ transition : {
   ease: [0, 0.71, 0.2, 1.01],
 }  }
   return (
-    <div className='min-h-screen w-full bg-neutral-900 z-40 rounded-b-3xl flex justify-center items-center px-4 py-10'>
+    <div className='min-h-screen w-full bg-neutral-950 z-40 rounded-b-3xl flex justify-center items-center px-4 py-10'>
       <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {servicesOffered.map((service, idx) => (
           <motion.div

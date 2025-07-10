@@ -75,9 +75,9 @@ const gradientVariants = {
 };
 
 const skillsData = [
-  { icon: Code2, label: "Frontend", color: "bg-[#ddff00]" },
-  { icon: Globe, label: "Backend", color: "bg-[#ddff00]" },
-  { icon: Smartphone, label: "Mobile", color: "bg-[#ddff00]" }
+  { icon: Code2, label: "Frontend", color: "bg-[#CDEA68]" },
+  { icon: Globe, label: "Backend", color: "bg-[#CDEA68]" },
+  { icon: Smartphone, label: "Mobile", color: "bg-[[#CDEA68]" }
 ];
 
 const socialLinks = [
@@ -94,8 +94,8 @@ const AnimatedButton = ({ onClick, children, variant = "primary", className = ""
         relative group px-8 py-4 rounded-full font-semibold text-lg
         transition-all duration-300 ease-out overflow-hidden z-40
         ${variant === "primary" 
-          ? "bg-[#ddff00] text-black shadow-lg shadow-[#ddff00]/40 hover:shadow-[#ddff00]/60" 
-          : "bg-black text-[#ddff00] border border-[#ddff00]/40 hover:bg-[#ddff00]/10"
+          ? "bg-[#CDEA68] text-black shadow-lg shadow-[#CDEA68]/40 hover:shadow-[#CDEA68]/60" 
+          : "bg-black text-[#CDEA68] border border-[#CDEA68]/40 hover:bg-[#CDEA68]/10"
         }
         ${className}
       `}
@@ -121,12 +121,12 @@ const SkillCard = ({ skill, index }) => {
       whileHover={{ y: -10, scale: 1.05 }}
       custom={index}
     >
-      <div className="relative bg-black rounded-2xl p-6 border border-[#ddff00]/40 hover:border-[#ddff00]/60 transition-all duration-300 z-40">
-        <div className={`inline-flex p-3 rounded-xl bg-[#ddff00] mb-4 z-40`}>
+      <div className="relative bg-black rounded-2xl p-6 border border-[#CDEA68]/40 hover:border-[#CDEA68]/60 transition-all duration-300 z-40">
+        <div className={`inline-flex p-3 rounded-xl bg-[#CDEA68] mb-4 z-40`}>
           <Icon className="w-6 h-6 text-black z-40" />
         </div>
-        <h3 className="text-[#ddff00] font-semibold text-lg z-40">{skill.label}</h3>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#ddff00]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl z-40" />
+        <h3 className="text-[#CDEA68] font-semibold text-lg z-40">{skill.label}</h3>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#CDEA68]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl z-40" />
       </div>
     </motion.div>
   );
@@ -140,14 +140,14 @@ const SocialLink = ({ social, index }) => {
       href={social.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative p-4 bg-black rounded-full border border-[#ddff00]/40 hover:border-[#ddff00]/60 transition-all duration-300 z-40"
+      className="group relative p-4 bg-black rounded-full border border-[#CDEA68]/40 hover:border-[#CDEA68]/60 transition-all duration-300 z-40"
       variants={itemVariants}
       whileHover={{ scale: 1.1, y: -5 }}
       whileTap={{ scale: 0.9 }}
       custom={index}
     >
-      <Icon className="w-6 h-6 text-[#ddff00] group-hover:text-[#ddff00] transition-colors duration-300 z-40" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#ddff00]/20 to-[#ddff00]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full z-40" />
+      <Icon className="w-6 h-6 text-[#CDEA68] group-hover:text-[#CDEA68] transition-colors duration-300 z-40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#CDEA68]/20 to-[#CDEA68]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full z-40" />
     </motion.a>
   );
 };
@@ -181,7 +181,7 @@ const Home = forwardRef((props, ref) => {
         <motion.div 
           className="absolute w-[40%] h-[40%] rounded-full blur-[100px] z-30"
           style={{
-            background: '#ddff00',
+            background: '#CDEA68',
             left: `${mousePosition.x * 0.02}%`,
             top: `${mousePosition.y * 0.02}%`,
             opacity: 0.15
@@ -201,7 +201,7 @@ const Home = forwardRef((props, ref) => {
         <motion.div 
           className="absolute w-[30%] h-[30%] rounded-full blur-[80px] z-30"
           style={{
-            background: '#ddff00',
+            background: '#CDEA68',
             right: `${mousePosition.x * 0.03}%`,
             bottom: `${mousePosition.y * 0.03}%`,
             opacity: 0.1
@@ -220,7 +220,7 @@ const Home = forwardRef((props, ref) => {
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-[#ddff00] rounded-full z-30"
+            className="absolute w-1 h-1 bg-[#CDEA68] rounded-full z-30"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -246,7 +246,7 @@ const Home = forwardRef((props, ref) => {
           <div className="space-y-8 z-40">
             <motion.div variants={itemVariants} className="z-40">
               <motion.span 
-                className="inline-block px-4 py-2 bg-[#ddff00]/20 text-[#ddff00] rounded-full text-sm font-medium mb-4 z-40"
+                className="inline-block px-4 py-2 bg-[#CDEA68]/20 text-[#CDEA68] rounded-full text-sm font-medium mb-4 z-40"
                 whileHover={{ scale: 1.05 }}
               >
                 👋 Hello, I'm
@@ -255,7 +255,7 @@ const Home = forwardRef((props, ref) => {
 
             <motion.div variants={itemVariants} className="z-40">
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight z-40">
-                <span className="text-[#ddff00] z-40">Anshu</span>
+                <span className="text-[#CDEA68] z-40">Anshu</span>
                 <br />
                 <span className="text-white z-40">Mishra</span>
               </h1>
@@ -264,7 +264,7 @@ const Home = forwardRef((props, ref) => {
             <motion.div variants={itemVariants} className="z-40">
               <p className="text-xl sm:text-2xl text-gray-300 font-medium z-40">
                 Full Stack Developer & 
-                <span className="text-[#ddff00] z-40"> Creative Problem Solver</span>
+                <span className="text-[#CDEA68] z-40"> Creative Problem Solver</span>
               </p>
             </motion.div>
             <motion.div variants={itemVariants} className="z-40">
@@ -316,23 +316,23 @@ const Home = forwardRef((props, ref) => {
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  className="text-center p-4 bg-black rounded-xl border border-[#ddff00]/40 z-40"
+                  className="text-center p-4 bg-black rounded-xl border border-[#CDEA68]/40 z-40"
                   variants={itemVariants}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="text-2xl font-bold text-[#ddff00] z-40">{stat.number}</div>
+                  <div className="text-2xl font-bold text-[#CDEA68] z-40">{stat.number}</div>
                   <div className="text-sm text-gray-400 z-40">{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>
             <motion.div 
-              className="relative p-8 bg-black rounded-2xl border border-[#ddff00]/40 z-40"
+              className="relative p-8 bg-black rounded-2xl border border-[#CDEA68]/40 z-40"
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-center gap-4 z-40">
                 <motion.div
-                  className="w-12 h-12 bg-[#ddff00] rounded-full flex items-center justify-center cursor-pointer z-40"
+                  className="w-12 h-12 bg-[#CDEA68] rounded-full flex items-center justify-center cursor-pointer z-40"
                   onClick={() => setIsMoved(!isMoved)}
                   animate={{
                     rotate: isMoved ? 360 : 0,
@@ -348,7 +348,7 @@ const Home = forwardRef((props, ref) => {
                   <Code2 className="w-6 h-6 text-black z-40" />
                 </motion.div>
                 <div className="z-40">
-                  <h3 className="text-[#ddff00] font-semibold z-40">Ready to collaborate?</h3>
+                  <h3 className="text-[#CDEA68] font-semibold z-40">Ready to collaborate?</h3>
                   <p className="text-gray-400 text-sm z-40">Let's build something amazing together</p>
                 </div>
               </div>
@@ -362,8 +362,8 @@ const Home = forwardRef((props, ref) => {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-6 h-10 border-2 border-[#ddff00]/30 rounded-full flex justify-center z-40">
-          <div className="w-1 h-3 bg-[#ddff00]/50 rounded-full mt-2 z-40"></div>
+        <div className="w-6 h-10 border-2 border-[#CDEA68]/30 rounded-full flex justify-center z-40">
+          <div className="w-1 h-3 bg-[#CDEA68]/50 rounded-full mt-2 z-40"></div>
         </div>
       </motion.div>
     </motion.div>
