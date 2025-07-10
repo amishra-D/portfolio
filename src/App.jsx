@@ -26,7 +26,7 @@ const App = () => {
   return (
     <div className="bg-black min-h-screen flex flex-col overflow-x-hidden relative scroll-smooth">
       <div
-        className="bg-green-700 rounded-full w-16 h-16 flex justify-center items-center bottom-4 right-4 z-50 fixed scale-95 active:scale-100 active:bg-green-700"
+        className="bg-[#CDEA68]/80 rounded-full w-16 h-16 flex justify-center items-center bottom-4 right-4 z-50 fixed scale-95 active:scale-100 active:[#CDEA68]"
         onClick={() => scrollToSection(homeRef)}
       >
         <ChevronUp size={28} color="white" />

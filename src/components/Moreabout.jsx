@@ -37,9 +37,9 @@ transition : {
             initial="hidden"
             whileInView="visible"
             key={idx}
-            className="bg-black border rounded-2xl border-[#ddff00] flex flex-col gap-4 p-6 shadow-md hover:scale-[1.02] transition-transform"
+            className="bg-black border rounded-2xl border-[#CDEA68] flex flex-col gap-4 p-6 shadow-md hover:scale-[1.02] transition-transform"
           >
-            <span className="text-[#ddff00] text-3xl self-start font-bold">#{idx + 1}</span>
+            <span className="text-[#CDEA68] text-3xl self-start font-bold">#{idx + 1}</span>
             <div className="flex flex-col items-center justify-center gap-3 text-white text-4xl font-bold">
               <h1>{service.title}</h1>
               <p className='text-sm text-gray-300 leading-relaxed'>{service.description}</p>

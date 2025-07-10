@@ -2,42 +2,10 @@ import React, { forwardRef, useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Download, Github, Linkedin, Mail, ExternalLink, Code2, Smartphone, Globe } from "lucide-react";
 
-const handleDownload = async () => {
-  try {
-    const response = await fetch('/Resume.pdf', { method: 'HEAD' });
-    
-    if (!response.ok) {
-      throw new Error(`File not found: ${response.status}`);
-    }
-    
-    const link = document.createElement('a');
-    link.href = '/Resume.pdf';
-    link.download = 'Anshu-CV.pdf';
-    link.style.display = 'none';
-    
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    
-    console.log('Download started successfully');
-  } catch (error) {
-    console.error('Download failed:', error);
-    
-    try {
-      const link = document.createElement('a');
-      link.href = '/Resume.pdf';
-      link.download = 'Anshu-CV.pdf';
-      link.target = '_blank';
-      
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } catch (fallbackError) {
-      console.error('Fallback download failed:', fallbackError);
-      window.open('/Resume.pdf', '_blank');
-    }
-  }
+const handleDownload = () => {
+  window.open('https://drive.google.com/file/d/1X2b5wORJYaFssghckNmOSynPbIrJDti2/view?usp=sharing', '_blank');
 };
+
 
 const containerVariants = {
   hidden: { opacity: 0 },

@@ -110,14 +110,14 @@ const Project = forwardRef((props, ref) => {
           <>
             <button
               onClick={scrollLeft}
-              className="md:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-10 w-10 h-10 bg-[#ddff00] text-black rounded-full flex items-center justify-center hover:bg-[#ddff00]/90 transition-colors"
+              className="md:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-10 w-10 h-10 bg-[#CDEA68] text-black rounded-full flex items-center justify-center hover:bg-[#CDEA68]/90 transition-colors"
               aria-label="Scroll left"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={scrollRight}
-              className="md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-10 w-10 h-10 bg-[#ddff00] text-black rounded-full flex items-center justify-center hover:bg-[#ddff00]/90 transition-colors"
+              className="md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-10 w-10 h-10 bg-[#CDEA68] text-black rounded-full flex items-center justify-center hover:bg-[#CDEA68]/90 transition-colors"
               aria-label="Scroll right"
             >
               <ChevronRight className="w-6 h-6" />
@@ -148,14 +148,14 @@ const Project = forwardRef((props, ref) => {
           <div className="flex justify-center gap-4 mt-6">
             <button
               onClick={scrollLeft}
-              className="w-10 h-10 bg-[#ddff00] text-black rounded-full flex items-center justify-center hover:bg-[#ddff00]/90 transition-colors"
+              className="w-10 h-10 bg-[#CDEA68] text-black rounded-full flex items-center justify-center hover:bg-[#CDEA68]/90 transition-colors"
               aria-label="Scroll left"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={scrollRight}
-              className="w-10 h-10 bg-[#ddff00] text-black rounded-full flex items-center justify-center hover:bg-[#ddff00]/90 transition-colors"
+              className="w-10 h-10 bg-[#CDEA68] text-black rounded-full flex items-center justify-center hover:bg-[#CDEA68]/90 transition-colors"
               aria-label="Scroll right"
             >
               <ChevronRight className="w-6 h-6" />
